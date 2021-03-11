@@ -8,6 +8,5 @@ public class Main {
     public static void main(String[] args) {
         int[] input = {3, 0, 1};
 
-        System.out.print(leetCodeOne.missingNumber(input));
     }
 }
