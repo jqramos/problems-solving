@@ -3,6 +3,10 @@ import org.junit.Rule;
 import org.junit.rules.ExpectedException;
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.concurrent.atomic.AtomicIntegerArray;
+import java.util.stream.IntStream;
 
 public class Test {
     @org.junit.Test
@@ -36,8 +40,42 @@ public class Test {
 
     @org.junit.Test
     public void exam(){
-//        System.out.print(testttttt(new int[]{3, 4, 3, 0, 2, 2, 3, 0, 0}));
-        System.out.print(solution("aabbcc"));
+        int[] input = {3, 0, 1 ,6,7,3};
+        int[] input2 = {9, 6, 4, 2, 3, 5, 7, 0, 1};
+        int[] input3 = {0, 1};
+        int[] input4 = {1, 1};
+        int[] input5 = {0, 1, 2, 3, 4, 5, 6, 7, 9};
+        int[] input6 = {0, 1, 2, 3, 4, 5, 6, 7, 8};
+        int[] input7 = {0, 1, 2, 3, 4, 5, 6, 7, 9, 10};
+        int[] input8 = {0, 1, 2, 3, 4, 5, 6, 7, 8, 10};
+        int[] input9 = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+        System.out.println(
+                twoSum(input, 6)
+        );
+
+    }
+
+    public int[] twoSum(int[] nums, int target) {
+
+    }
+
+    public boolean isAnagram(String s, String t) {
+        //sort string
+        char[] s1 = s.toCharArray();
+        char[] t1 = t.toCharArray();
+        Arrays.sort(s1);
+        Arrays.sort(t1);
+        return Arrays.equals(s1, t1);
+    }
+
+    public boolean containsDuplicate(int[] nums) {
+        Arrays.sort(nums);
+        for(int i = 0; i < nums.length -1; i++){
+            if (nums[i] == nums[i+1]) {
+                return true;
+            }
+        }
+        return false;
     }
 
 
